@@ -1,0 +1,12 @@
+env HOME=$WORK/home
+
+modpath . baz
+cmp stdout stdout.golden
+
+-- go.mod --
+module example.com/foo/bar
+-- baz/go.mod --
+module example.com/foo/baz
+-- stdout.golden --
+example.com/foo/bar
+example.com/foo/baz

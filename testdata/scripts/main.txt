@@ -1,0 +1,9 @@
+env HOME=$WORK/home
+
+modpath
+cmp stdout stdout.golden
+
+-- go.mod --
+module example.com/foo/bar
+-- stdout.golden --
+example.com/foo/bar
