@@ -53,6 +53,7 @@ func findModFile(dir string) (string, error) {
 	return strings.TrimSpace(out), nil
 }
 
+// dir specifies the working directory of the command.
 func runCmd(dir string, name string, args ...string) (string, error) {
 	var outData, errData bytes.Buffer
 	c := exec.Command(name, args...)
