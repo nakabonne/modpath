@@ -18,4 +18,9 @@ jobs:
       working-directory: cmd/modpath
       run: go build
     - name: Test
-      run: go test ./...
+      run: go test -v -coverpkg ./... -covermode atomic -coverprofile coverage.txt
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage.txt

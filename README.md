@@ -1,6 +1,7 @@
 # modpath
 
 [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/nakabonne/modpath)
+[![codecov](https://codecov.io/gh/nakabonne/modpath/branch/master/graph/badge.svg)](https://codecov.io/gh/nakabonne/modpath)
 
 `modpath` provides an API to detect the module path from the `go.mod` file underneath the given directory or its root.
 
